@@ -67,8 +67,8 @@ Example of workflow
     10) git log - to view log history of commits
 
 
-    Push and remote branch
-
+Push and remote branch
+How to push the initial commit??
     local - your pc
 
     git remote -v => we can check for remote branches with this command
@@ -89,5 +89,33 @@ How can we rename the remote branch?
 How do we tell git to push to the remote
 main/master branch called origin with the command
 git push -u origin main/master
-
 git branch -M main -> renaming master to main
+
+How to fetch and pull 
+
+There are two options of getting repository changes from a remote branch
+
+    git pull
+    git fetch
+
+WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
+
+git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
+
+In English
+Git fetch will download changes from the Github remote repository, however you will not see those changes be part of the files you have in the working directory
+Fetch allows us to grab additional work done on the remote master branch without needing to merge it in your working directory files
+
+Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.
+
+Commands 
+    git fetch <remote> <branch>
+Usually, it is like this 
+    git fetch origin <branch>
+
+git pull -> will update your logs
+and as well as remote se saare code leke aayega aur aake aapki working directory mein overwrite krdegea!!!
+
+Using git pull makes sense when you want to directly grab changes from the remote branch and directly merge them into your current branch
+This means, you will literally update the files in your working directory to match up and merge with the remote branch
+**Not a best practice
