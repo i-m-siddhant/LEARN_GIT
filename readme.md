@@ -119,3 +119,56 @@ and as well as remote se saare code leke aayega aur aake aapki working directory
 Using git pull makes sense when you want to directly grab changes from the remote branch and directly merge them into your current branch
 This means, you will literally update the files in your working directory to match up and merge with the remote branch
 **Not a best practice
+
+
+Day 3 topics
+
+Master/main branch and branches -> important
+What is head? -> very important
+Git branch commands
+    -> git branch - basic command, no harm
+    -> git switch - good to know
+    -> git checkout - very important
+Delete or rename branch  - not so useful
+Merging branch and conflicts - very important 
+Using git diff - not so useful, better to have gitlens!!!
+
+
+* ---Understanding branches---
+
+* Branch represents an independent line of development
+* Branches serve as an abstraction for the edit/stage/commit process
+* They are a way to request a brand new working directory, staging area, and project history
+
+Upon creating a new repo with git init, you create a new branch called the master branch or main branch
+
+This is a branch just like any other, but it's simple the first one created.
+
+* ---Master vs Main---
+
+* Github ke liye initial branch is main branch
+* Git ke liye initial branch is master branch, but it has changed
+* We can also rename any branch (trunk branch)
+
+
+* ---Creating a new branch----
+
+c1 -> c2 -> c3 <- main
+
+at c3 we make a new branch
+
+c1 -> c2 -> c3 - main
+            |
+            newBranch
+
+we make changes in new branch and commit it
+
+c1 -> c2 -> c3 - main
+            |
+            c4 -> c5 - newBranch
+
+Now we merge it 
+
+c1 -> c2 -> c3    
+            |     
+            c4 -> c5 - main, newBranch
