@@ -1,3 +1,4 @@
+github pat - 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
 git - open source vcs
 github - hosting service (if we want our code online) (Github is by Microsoft)
 
