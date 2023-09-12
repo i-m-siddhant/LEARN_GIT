@@ -185,11 +185,10 @@ This is a branch just like any other, but it's simple the first one created.
 
 ## ---Creating a new branch----
 
-*
+    *
+    
     c1 -> c2 -> c3 <- main
     at c3 we make a new branch
-
-    *
 
     c1 -> c2 -> c3 - main
                 |
@@ -243,11 +242,11 @@ This is a branch just like any other, but it's simple the first one created.
     1) git switch master
     2) git merge new_branch
 
-            master <- head
-            |
-c1 -> c2 -> c3 
-            |
-            new_branch
+                master <- head
+                |
+    c1 -> c2 -> c3 
+                |
+                new_branch
 
 # More practical case
 
@@ -267,7 +266,7 @@ Now, we need to merge new_branch with the master branch. For this we need to do 
 
 * Auto commit - Best case
 
- *
+
 
                             master <- head
                             |
