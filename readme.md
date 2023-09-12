@@ -170,50 +170,49 @@ Example of workflow
 
 ## ---Understanding branches---
 
-    * Branch represents an independent line of development
-    * Branches serve as an abstraction for the edit/stage/commit process
-    * They are a way to request a brand new working directory, staging area, and project history
-
-Upon creating a new repo with git init, you create a new branch called the master branch or main branch
-
+* Branch represents an independent line of development
+* Branches serve as an abstraction for the edit/stage/commit process
+* They are a way to request a brand new working directory, staging area, and project history
+* Upon creating a new repo with git init, you create a new branch called the master branch or main branch
 This is a branch just like any other, but it's simple the first one created.
 
-* ---Master vs Main---
+## ---Master vs Main---
 
 * Github ke liye initial branch is main branch
 * Git ke liye initial branch is master branch, but it has changed
 * We can also rename any branch (trunk branch)
 
 
-* ---Creating a new branch----
+## ---Creating a new branch----
 
-c1 -> c2 -> c3 <- main
+*
+    c1 -> c2 -> c3 <- main
+    at c3 we make a new branch
 
-at c3 we make a new branch
+    *
 
-c1 -> c2 -> c3 - main
-            |
-            newBranch
+    c1 -> c2 -> c3 - main
+                |
+                newBranch
 
-we make changes in new branch and commit it
+    we make changes in new branch and commit it
 
-c1 -> c2 -> c3 - main
-            |
-            c4 -> c5 - newBranch
+    c1 -> c2 -> c3 - main
+                |
+                c4 -> c5 - newBranch
 
-Now we merge it 
+    Now we merge it 
 
-c1 -> c2 -> c3    
-            |     
-            c4 -> c5 - main, newBranch
+    c1 -> c2 -> c3    
+                |     
+                c4 -> c5 - main, newBranch
 
-Branches are just references to a commit
-Using HEAD tells us which branch reference we are currently "checking out".
+* Branches are just references to a commit
+* Using HEAD tells us which branch reference we are currently "checking out".
+* We can always switch back out HEAD to some other branch (which is a pointer to a commit reference)
 
-We can always switch back out HEAD to some other branch (which is a pointer to a commit reference)
 
-
-git branch commands
+# git branch commands
 
 *Renaming a branch*
 
@@ -221,25 +220,26 @@ git branch commands
     git branch -m new_name
 
 *Deleting a branch*
-    git branch -d <branch_to_delete_name>
 
+    git branch -d <branch_to_delete_name>
     #You cannot delete a branch you are checkout at
     #You also will get a warning if the branch is not merged
         -> You can confirm you want to do this anyways with -D
     
 
-Merging Branches and conflicts
+# Merging Branches and conflicts
 
 
-Simple merge (Fast forward)
+# Simple merge (Fast forward)
+    *
 
-master
-|
-c1 -> c2 -> c3 
-            |
+    master
+    |
+    c1 -> c2 -> c3 
+                |
             new_branch <- head
 
-For fast forward merge (example is taken for master and a branch named new_branch)
+    For fast forward merge (example is taken for master and a branch named new_branch)
     1) git switch master
     2) git merge new_branch
 
@@ -249,36 +249,38 @@ c1 -> c2 -> c3
             |
             new_branch
 
-More practical case
+# More practical case
 
+    * 
 
-        master <- head
+            master <- head
+            |
+    c1 --> c5
         |
-c1 --> c5
-    |
-    |
-    c2 -> c3 -> c4
-                |
-                new_branch
+        |
+        c2 -> c3 -> c4
+                    |
+                    new_branch
 
 Now, we need to merge new_branch with the master branch. For this we need to do the same thing again , but this is not fast forward merge
     Here, there can be two scenarios
 
-1) Auto commit - Best case
+* Auto commit - Best case
 
+ *
 
-                        master <- head
-                        |
-c1 --> c5 -------> *auto commit*
-    |                  |
-    |                  |
-    c2 -> c3 -> c4 ----|
-                |
-                new_branch
+                            master <- head
+                            |
+    c1 --> c5 -------> *auto commit*
+        |                  |
+        |                  |
+        c2 -> c3 -> c4 ----|
+                    |
+                    new_branch
 
-Yeh tab hai jab conflicts naa ho dono branches mein 
+    Yeh tab hai jab conflicts naa ho dono branches mein 
 
-2) Merge Conflicts - Resolving conflicts and merging branches
+* Merge Conflicts - Resolving conflicts and merging branches
 
     Git will warn us about files in conflict
     Our code editor will give a markdown and syntax highlighting for resolving the conflicts
