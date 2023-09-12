@@ -1,4 +1,4 @@
-github pat - 
+github pat - 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
 git - open source vcs
 github - hosting service (if we want our code online) (Github is by Microsoft)
 
@@ -182,8 +182,70 @@ We can always switch back out HEAD to some other branch (which is a pointer to a
 
 git branch commands
 
-Renaming a branch
+*Renaming a branch*
 
     git switch branch_to_rename
     git branch -m new_name
 
+*Deleting a branch*
+    git branch -d <branch_to_delete_name>
+
+    #You cannot delete a branch you are checkout at
+    #You also will get a warning if the branch is not merged
+        -> You can confirm you want to do this anyways with -D
+    
+
+Merging Branches and conflicts
+
+
+Simple merge (Fast forward)
+
+master
+|
+c1 -> c2 -> c3 
+            |
+            new_branch <- head
+
+For fast forward merge (example is taken for master and a branch named new_branch)
+    1) git switch master
+    2) git merge new_branch
+
+            master <- head
+            |
+c1 -> c2 -> c3 
+            |
+            new_branch
+
+More practical case
+
+
+        master <- head
+        |
+c1 --> c5
+    |
+    |
+    c2 -> c3 -> c4
+                |
+                new_branch
+
+Now, we need to merge new_branch with the master branch. For this we need to do the same thing again , but this is not fast forward merge
+    Here, there can be two scenarios
+
+1) Auto commit - Best case
+
+
+                        master <- head
+                        |
+c1 --> c5 -------> *auto commit*
+    |                  |
+    |                  |
+    c2 -> c3 -> c4 ----|
+                |
+                new_branch
+
+Yeh tab hai jab conflicts naa ho dono branches mein 
+
+2) Merge Conflicts - Resolving conflicts and merging branches
+
+    Git will warn us about files in conflict
+    Our code editor will give a markdown and syntax highlighting for resolving the conflicts
