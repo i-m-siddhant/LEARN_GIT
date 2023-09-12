@@ -284,3 +284,8 @@ Now, we need to merge new_branch with the master branch. For this we need to do 
 
     Git will warn us about files in conflict
     Our code editor will give a markdown and syntax highlighting for resolving the conflicts
+
+## git diff
+
+* git diff is a powerful tool that can show the differences between data sets
+* Display the differences betweent the original file and unstaged changes
