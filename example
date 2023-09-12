@@ -1,0 +1,57 @@
+git init
+make a file named myfile.txt some lines
+add and commit
+check git log
+make a new branch named new_branch
+switch to the new branch
+git status - nothing to commit
+Add line added on new branch
+add and commit on new branch
+Again add third line and add and commit 
+check git log
+git switch master - 2 lines should disappear
+git switch new_branch - 2 lines should come again
+
+Now merge new_branch changes to master
+
+git switch master
+clear
+git merge new_branch - should be a fast-forward merge
+
+git branch - on master branch
+
+Make another branch from master
+
+git branch experimental 
+git switch experimental
+git status 
+make a new file named experimental.txt and add a line
+add and commit
+switch back to master
+create a new file named master.txt on master branch
+add and commit
+switch between master and experimental to understand the changes
+
+Try merging experimental with master
+
+git merge experimental - will be merged by ort strategy
+no conflicts will be come, as same file mein conflicting changes nahi hai
+
+Make a new branch from master bug_qa
+git branch bug_qa
+git branch - should be on master
+Add a line on master in my file.txt
+add and commit 
+git switch bug_qa
+add a different line on the same line where u added on master branch to make a conflicting change, so that we can see the case of merge conflicts
+git status
+add and commit
+use git switch to check changes in master and bug_qa , you will realise the conflict
+Come to master branch
+git merge bug_qa
+You will see the syntax highlight and markdown
+Choose and resolve wisely and you will be able to merge
+
+
+
+
