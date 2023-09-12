@@ -265,17 +265,18 @@ Now, we need to merge new_branch with the master branch. For this we need to do 
     Here, there can be two scenarios
 
 * Auto commit - Best case
+ 
+    *
 
 
-
-                            master <- head
-                            |
-    c1 --> c5 -------> *auto commit*
-        |                  |
-        |                  |
-        c2 -> c3 -> c4 ----|
-                    |
-                    new_branch
+                                master <- head
+                                |
+        c1 --> c5 -------> *auto commit*
+            |                   |
+            |                   |
+            c2 -> c3 -> c4 ---- |
+                        |
+                        new_branch
 
     Yeh tab hai jab conflicts naa ho dono branches mein 
 
