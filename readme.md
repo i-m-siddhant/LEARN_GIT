@@ -1,4 +1,4 @@
-github pat - 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
+github pat - 
 git - open source vcs
 github - hosting service (if we want our code online) (Github is by Microsoft)
 
@@ -173,3 +173,17 @@ Now we merge it
 c1 -> c2 -> c3    
             |     
             c4 -> c5 - main, newBranch
+
+Branches are just references to a commit
+Using HEAD tells us which branch reference we are currently "checking out".
+
+We can always switch back out HEAD to some other branch (which is a pointer to a commit reference)
+
+
+git branch commands
+
+Renaming a branch
+
+    git switch branch_to_rename
+    git branch -m new_name
+
