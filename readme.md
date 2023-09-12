@@ -1,47 +1,58 @@
-github pat - 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
 git - open source vcs
 github - hosting service (if we want our code online) (Github is by Microsoft)
 
-~ git --version --> to check the version of git installed
+# git --version --> to check the version of git installed
 
-~ Configuration
+# Configuration
 
--> Checking the current configuration with the commands
-    1) git config user.name
-    2) git config user.email
+*Checking the current configuration with the commands*
 
--> Setting the configuration commands 
-    1) git config --global user.name "user"
-    2) git config --global user.email "email"
+    git config user.name
+    git config user.email
+
+*Setting the configuration commands*
+
+    git config --global user.name "user"
+    git config --global user.email "email"
 
 
-Repository - The main place we track changes and manage our files that are using git is called a Repository.
+# Repository - The main place we track changes and manage our files that are using git is called a Repository.
 
 
-How can we create a git repository?
+# How can we create a git repository?
 
--> git init
+**
+
+    git init
     This command initializes a Git Repository on your local machine
     You only need to run this command once per project
--> git status
+    git status
     This command will report back the status of your git repository
 
 
-Public repositories
+# Public repositories
+
     We can easily clone public repositories into our local witht the git clone command and then the HTTPS url for the repo. But it is not possible with other private repositories!!!
+**
 
     git clone https.//github.com/account/repo.git
-Private repositories
+# Private repositories
     We need to generate the token from the site
+**
 
     git clone https.//<enter token here>@github.com/account/repo.git
 
 
 Day 2
- --> git add, git commit, git push, git pull, git status, git log, git diff
+# git add, git commit, git push, git pull, git status, git log, git diff
 
-BASIC GIT USAGE FOR SOLO DEVELOPER
+# BASIC GIT USAGE FOR SOLO DEVELOPER
+    
+    **
+
     git clone or git init
+
+    
     working directory - work in local
     repository - work in github.com 
 
