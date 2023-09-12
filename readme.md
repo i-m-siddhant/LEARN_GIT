@@ -1,9 +1,9 @@
 git - open source vcs
 github - hosting service (if we want our code online) (Github is by Microsoft)
 
-# git --version --> to check the version of git installed
+## git --version --> to check the version of git installed
 
-# Configuration
+## Configuration
 
 *Checking the current configuration with the commands*
 
@@ -16,10 +16,10 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
     git config --global user.email "email"
 
 
-# Repository - The main place we track changes and manage our files that are using git is called a Repository.
+## Repository - The main place we track changes and manage our files that are using git is called a Repository.
 
 
-# How can we create a git repository?
+## How can we create a git repository?
 
 **
 
@@ -30,13 +30,13 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
     This command will report back the status of your git repository
 
 
-# Public repositories
+## Public repositories
 
     We can easily clone public repositories into our local witht the git clone command and then the HTTPS url for the repo. But it is not possible with other private repositories!!!
 **
 
     git clone https.//github.com/account/repo.git
-# Private repositories
+## Private repositories
     We need to generate the token from the site
 **
 
@@ -44,9 +44,9 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 
 
 Day 2
-# git add, git commit, git push, git pull, git status, git log, git diff
+## git add, git commit, git push, git pull, git status, git log, git diff
 
-# BASIC GIT USAGE FOR SOLO DEVELOPER
+## BASIC GIT USAGE FOR SOLO DEVELOPER
     
     **
 
@@ -79,8 +79,11 @@ Example of workflow
     10) git log - to view log history of commits
 
 
-Push and remote branch
-How to push the initial commit??
+## Push and remote branch
+    How to push the initial commit??
+
+    ** 
+
     local - your pc
 
     git remote -v => we can check for remote branches with this command
@@ -93,64 +96,83 @@ How to push the initial commit??
 
         git remote add origin <gitRepoUrl>
 
-How can we rename the remote branch?
+## How can we rename the remote branch?
+
+    ** 
 
     git remote rename <old> <new>
     git remote remove <name>
 
-How do we tell git to push to the remote
-main/master branch called origin with the command
-git push -u origin main/master
-git branch -M main -> renaming master to main
+## How do we tell git to push to the remote
 
-How to fetch and pull 
+    **
 
-There are two options of getting repository changes from a remote branch
+    main/master branch called origin with the command
+    git push -u origin main/master
+    git branch -M main -> renaming master to main
+
+## How to fetch and pull 
+
+    **
+
+    There are two options of getting repository changes from a remote branch
 
     git pull
     git fetch
 
-WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
+## WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
 
-git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
+## git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
 
-In English
-Git fetch will download changes from the Github remote repository, however you will not see those changes be part of the files you have in the working directory
-Fetch allows us to grab additional work done on the remote master branch without needing to merge it in your working directory files
+** 
 
-Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.
+    Git fetch will download changes from the Github remote repository, however you will not see those changes be part of the files you have in the working directory
+    
+    Fetch allows us to grab additional work done on the remote master branch without needing to merge it in your working directory files
 
-Commands 
+    Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.
+
+## Commands 
+    ** 
+
     git fetch <remote> <branch>
-Usually, it is like this 
+
+## Usually, it is like this 
+
+    ** 
+
     git fetch origin <branch>
 
-git pull -> will update your logs
-and as well as remote se saare code leke aayega aur aake aapki working directory mein overwrite krdegea!!!
+    git pull -> will update your logs
+    and as well as remote se saare code leke aayega aur aake aapki working directory mein overwrite krdegea!!!
 
-Using git pull makes sense when you want to directly grab changes from the remote branch and directly merge them into your current branch
-This means, you will literally update the files in your working directory to match up and merge with the remote branch
-**Not a best practice
+    Using git pull makes sense when you want to directly grab changes from the remote branch and directly merge them into your current branch
+    
+    This means, you will literally update the files in your working directory to match up and merge with the remote branch
 
-
-Day 3 topics
-
-Master/main branch and branches -> important
-What is head? -> very important
-Git branch commands
-    -> git branch - basic command, no harm
-    -> git switch - good to know
-    -> git checkout - very important
-Delete or rename branch  - not so useful
-Merging branch and conflicts - very important 
-Using git diff - not so useful, better to have gitlens!!!
+## But it is not a best practice
 
 
-* ---Understanding branches---
+## Day 3 topics
 
-* Branch represents an independent line of development
-* Branches serve as an abstraction for the edit/stage/commit process
-* They are a way to request a brand new working directory, staging area, and project history
+    **
+
+    Master/main branch and branches -> important
+    What is head? -> very important
+    Git branch commands
+        -> git branch - basic command, no harm
+        -> git switch - good to know
+        -> git checkout - very important
+    Delete or rename branch  - not so useful
+    Merging branch and conflicts - very important 
+    Using git diff - not so useful, better to have gitlens!!!
+
+
+## ---Understanding branches---
+
+    * Branch represents an independent line of development
+    * Branches serve as an abstraction for the edit/stage/commit process
+    * They are a way to request a brand new working directory, staging area, and project history
 
 Upon creating a new repo with git init, you create a new branch called the master branch or main branch
 
