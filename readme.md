@@ -49,8 +49,7 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 ## Private repositories
     We need to generate the token from the site
 **
-
-    `git clone https.//<enter token here>@github.com/account/repo.git`
+    git clone https.//<enter token here>@github.com/account/repo.git
 
 
 Day 2
