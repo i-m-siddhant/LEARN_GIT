@@ -58,6 +58,8 @@ Day 2
 * We use the git add command to stage changes to be committed. It means, to push our changes to the staging area.
 * It's a way of telling Git, please include the change in our next commit
 
+### Some extra points 
+
     git clone or git init
     
     working directory - work in local
