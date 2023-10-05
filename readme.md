@@ -18,8 +18,6 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 
 ## Repository - The main place we track changes and manage our files that are using git is called a Repository.
 
-** 
-
     A Git "Repo" is a workspace which tracks and manages files within a folder.
 
 ## How can we create a git repository?
@@ -87,7 +85,19 @@ Example of workflow
     9) Run git status, you will find clean working tree
     10) git log - to view log history of commits
 
+## More about committing and other stuff
 
+* Difference between using -m flag with git commit is to pass in an inline message rather than opening a text editor
+
+* *Below tip can be handy*
+
+    Suppose we made a commit and then realized that we forgot to include a file or maybe we had made a typo in the commit message, which we need to correct. So rather than making a brand new seperate commit, we can redo the previous commit using the --amend option
+
+* *Workflow to understand above tip*
+
+    git commit -m "some wrong commit"
+    git add forgetten file
+    git commit --amend
 ## Push and remote branch
     How to push the initial commit??
 
