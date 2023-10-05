@@ -24,8 +24,6 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 
 ## How can we create a git repository?
 
-**
-
     git init
     This command initializes a Git Repository on your local machine
     You only need to run this command once per project
@@ -43,12 +41,11 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 ## Public repositories
 
     We can easily clone public repositories into our local witht the git clone command and then the HTTPS url for the repo. But it is not possible with other private repositories!!!
-**
 
     git clone https.//github.com/account/repo.git
 ## Private repositories
     We need to generate the token from the site
-    
+
     git clone https.//<enter token here>@github.com/account/repo.git
 
 Day 2
@@ -61,10 +58,7 @@ Day 2
 * We use the git add command to stage changes to be committed. It means, to push our changes to the staging area.
 * It's a way of telling Git, please include the change in our next commit
 
-    **
-
     git clone or git init
-
     
     working directory - work in local
     repository - work in github.com 
