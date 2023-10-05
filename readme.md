@@ -94,14 +94,38 @@ Example of workflow
     Suppose we made a commit and then realized that we forgot to include a file or maybe we had made a typo in the commit message, which we need to correct. So rather than making a brand new seperate commit, we can redo the previous commit using the --amend option
 
 * *Workflow to understand above tip*
-
 ###
 
     git commit -m "some wrong commit"
     git add forgetten file
     git commit --amend
-    
+
+### Quick tips about committing
+* *Commit early and often*
+* *Make commits atomic - group similar changes together*
+* *Write meaningful but concise commit messages*
+* *Present tense or Past tense - Always describe your changes in imperative mood, as if you are giving order to the codebase to change its behavior*
+* *Some developers prefer past tense as well, it all depends on you, but just be consistent with one*
+
+### Ignoring files
+
+* We can tell Git which files and directories to be ignored in given repo, using a .gitignore file
+* This is useful for files you know you NEVER want to commit, including:
 ###
+    Secrets, API KEYS, Github Token, Credentials
+    .DS_Store on Mac
+    Log files
+    Dependencies and Packages
+
+### *How to make a proper .gitignore file*
+
+    Create a file called .gitignore in the root of a repo
+    Inside the file you can write patterns to tell Git which files and folders to ignore
+    For example, 
+    .DS_Store will ignore files named .DS_Store
+    folderName/ will ignore an entire directory
+    *.log will ignore any files with the .log extension
+
 ## Push and remote branch
     How to push the initial commit??
 
