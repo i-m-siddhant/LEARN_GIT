@@ -95,9 +95,13 @@ Example of workflow
 
 * *Workflow to understand above tip*
 
+###
+
     git commit -m "some wrong commit"
     git add forgetten file
     git commit --amend
+    
+###
 ## Push and remote branch
     How to push the initial commit??
 
