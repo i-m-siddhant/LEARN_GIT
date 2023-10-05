@@ -51,6 +51,8 @@ Come to master branch
 git merge bug_qa
 You will see the syntax highlight and markdown
 Choose and resolve wisely and you will be able to merge
+After making changes, do git commit
+
 
 
 

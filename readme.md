@@ -18,6 +18,9 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 
 ## Repository - The main place we track changes and manage our files that are using git is called a Repository.
 
+** 
+
+    A Git "Repo" is a workspace which tracks and manages files within a folder.
 
 ## How can we create a git repository?
 
@@ -26,9 +29,16 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
     git init
     This command initializes a Git Repository on your local machine
     You only need to run this command once per project
+    Initialize the repo in the top-level folder containing your project
+
     git status
     This command will report back the status of your git repository
 
+### Warning - Don't init a repo inside a repo!!! 
+
+* Before running git init, use git status to verify you are not inside the repo
+* If you do end up making a repo inside of a repo, you can delete it and try again!
+* To delete a repo, locate the associated .git directory and delete it
 
 ## Public repositories
 
@@ -47,7 +57,12 @@ Day 2
 ## git add, git commit, git push, git pull, git status, git log, git diff
 
 ## BASIC GIT USAGE FOR SOLO DEVELOPER
-    
+
+### Adding 
+
+* We use the git add command to stage changes to be committed. It means, to push our changes to the staging area.
+* It's a way of telling Git, please include the change in our next commit
+
     **
 
     git clone or git init
