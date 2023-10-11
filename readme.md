@@ -126,6 +126,20 @@ Example of workflow
     folderName/ will ignore an entire directory
     *.log will ignore any files with the .log extension
 
+### Branches
+
+* Alternative timelines for a project
+* If we make changes on one branch, they don't impact the other branch (unless we merge the changes)
+* In git, we are always working on a branch by default, called master/main
+* It doesn't do anything special or have fancy powers. It's just like any other branch
+* Many people designate the master branch as their "source of truth" or the "official branch" for their codebase, but not necessary to treat it in this way
+
+### *In 2020, Github renamed the default branch from master to main. The default Git branch name is still master
+
+### Head
+
+* *Head is simply a pointer that refers to the current "location" in your repo. It points to a particular branch reference*
+
 ## Push and remote branch
     How to push the initial commit??
 
@@ -257,6 +271,25 @@ This is a branch just like any other, but it's simple the first one created.
 * Using HEAD tells us which branch reference we are currently "checking out".
 * We can always switch back out HEAD to some other branch (which is a pointer to a commit reference)
 
+### *Creating and Switching*
+
+*First method*
+
+    git branch <newBranchName>
+    git switch <newBranchName>
+
+*Second method*
+
+    git checkout -b <newBranchName>
+
+*Third method*
+
+    git switch -c <newBranchName>
+    -c stands for create
+
+### *Viewing more info about a branch*
+
+    git branch -v
 
 # git branch commands
 
