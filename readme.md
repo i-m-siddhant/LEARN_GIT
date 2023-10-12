@@ -1,9 +1,13 @@
-git - open source vcs
-github - hosting service (if we want our code online) (Github is by Microsoft)
+#### About git and github
 
-## git --version --> to check the version of git installed
+*git - open source vcs*
+*github - hosting service (if we want our code online) (Github is by Microsoft)*
 
-## Configuration
+#### 
+
+    git --version --> to check the version of git installed
+
+#### *Configuration*
 
 *Checking the current configuration with the commands*
 
@@ -16,11 +20,11 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
     git config --global user.email "email"
 
 
-## Repository - The main place we track changes and manage our files that are using git is called a Repository.
+#### *Repository - The main place we track changes and manage our files that are using git is called a Repository.*
 
     A Git "Repo" is a workspace which tracks and manages files within a folder.
 
-## How can we create a git repository?
+#### How can we create a git repository?
 
     git init
     This command initializes a Git Repository on your local machine
@@ -36,18 +40,16 @@ github - hosting service (if we want our code online) (Github is by Microsoft)
 * If you do end up making a repo inside of a repo, you can delete it and try again!
 * To delete a repo, locate the associated .git directory and delete it
 
-## Public repositories
+### Public repositories
 
-    We can easily clone public repositories into our local witht the git clone command and then the HTTPS url for the repo. But it is not possible with other private repositories!!!
+*We can easily clone public repositories into our local witht the git clone command and then the HTTPS url for the repo. But it is not possible with other private repositories!!!*
 
     git clone https.//github.com/account/repo.git
-## Private repositories
-    We need to generate the token from the site
+### Private repositories
+
+*We need to generate the token from the site*
 
     git clone https.//<enter token here>@github.com/account/repo.git
-
-Day 2
-## git add, git commit, git push, git pull, git status, git log, git diff
 
 ## BASIC GIT USAGE FOR SOLO DEVELOPER
 
@@ -56,7 +58,7 @@ Day 2
 * We use the git add command to stage changes to be committed. It means, to push our changes to the staging area.
 * It's a way of telling Git, please include the change in our next commit
 
-### Some extra points 
+#### Beginner revision points 
 
     git clone or git init
     
@@ -72,7 +74,7 @@ Day 2
     git push -> pushing it to the github
 
 
-Example of workflow
+#### *Example of workflow*
 
     1) go into the folder and open it in text editor
     2) run git status to check whether it's an git repository or not
@@ -85,7 +87,7 @@ Example of workflow
     9) Run git status, you will find clean working tree
     10) git log - to view log history of commits
 
-## More about committing and other stuff
+#### *More about committing and other stuff*
 
 * Difference between using -m flag with git commit is to pass in an inline message rather than opening a text editor
 
@@ -140,10 +142,8 @@ Example of workflow
 
 * *Head is simply a pointer that refers to the current "location" in your repo. It points to a particular branch reference*
 
-## Push and remote branch
-    How to push the initial commit??
-
-    ** 
+### Push and remote branch
+*How to push the initial commit??*
 
     local - your pc
 
@@ -157,16 +157,12 @@ Example of workflow
 
         git remote add origin <gitRepoUrl>
 
-## How can we rename the remote branch?
-
-    ** 
+### How can we rename the remote branch?
 
     git remote rename <old> <new>
     git remote remove <name>
 
-## How do we tell git to push to the remote
-
-    **
+### How do we tell git to push to the remote
 
     main/master branch called origin with the command
     git push -u origin main/master
@@ -174,16 +170,14 @@ Example of workflow
 
 ## How to fetch and pull 
 
-    **
+*There are two options of getting repository changes from a remote branch*
 
-    There are two options of getting repository changes from a remote branch
+* git pull
+* git fetch
 
-    git pull
-    git fetch
+#### WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
 
-## WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
-
-## git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
+#### git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
 
 ** 
 
@@ -193,12 +187,12 @@ Example of workflow
 
     Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.
 
-## Commands 
+#### *Commands*
     ** 
 
     git fetch <remote> <branch>
 
-## Usually, it is like this 
+#### *Usually, it is like this* 
 
     ** 
 
@@ -211,25 +205,9 @@ Example of workflow
     
     This means, you will literally update the files in your working directory to match up and merge with the remote branch
 
-## But it is not a best practice
+*But git pull is not a best practice*
 
-
-## Day 3 topics
-
-    **
-
-    Master/main branch and branches -> important
-    What is head? -> very important
-    Git branch commands
-        -> git branch - basic command, no harm
-        -> git switch - good to know
-        -> git checkout - very important
-    Delete or rename branch  - not so useful
-    Merging branch and conflicts - very important 
-    Using git diff - not so useful, better to have gitlens!!!
-
-
-## ---Understanding branches---
+### ---Understanding branches---
 
 * Branch represents an independent line of development
 * Branches serve as an abstraction for the edit/stage/commit process
@@ -237,14 +215,14 @@ Example of workflow
 * Upon creating a new repo with git init, you create a new branch called the master branch or main branch
 This is a branch just like any other, but it's simple the first one created.
 
-## ---Master vs Main---
+### ---Master vs Main---
 
 * Github ke liye initial branch is main branch
 * Git ke liye initial branch is master branch, but it has changed
 * We can also rename any branch (trunk branch)
 
 
-## ---Creating a new branch----
+### ---Creating a new branch----
 
     *
     
@@ -305,7 +283,7 @@ This is a branch just like any other, but it's simple the first one created.
     #You also will get a warning if the branch is not merged
         -> You can confirm you want to do this anyways with -D
     
-## Merging - key points
+### Merging - key points
 
 * *We merge branches and not specific commits*
 * *We always merge to the current HEAD branch*
@@ -349,11 +327,8 @@ This is a branch just like any other, but it's simple the first one created.
 
 *Whenever you encounter merge conflicts, follow these steps to resolve them:*
 ### Merges more in detail
-
-
-# Simple merge (Fast forward)
-    *
-
+#### *Simple merge (Fast forward)*
+    
     master
     |
     c1 -> c2 -> c3 
@@ -370,7 +345,7 @@ This is a branch just like any other, but it's simple the first one created.
                 |
                 new_branch
 
-### More practical case
+*More practical case*
 
             master <- head
             |
@@ -382,10 +357,9 @@ This is a branch just like any other, but it's simple the first one created.
                     new_branch
 
 *Now, we need to merge new_branch with the master branch. For this we need to do the same thing again , but this is not fast forward merge*
-    
-### *Here, there can be two scenarios*
+#### *Here, there can be two scenarios*
 
-*Auto commit - Best case*
+* Auto commit - Best case
  
     
 
