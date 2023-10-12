@@ -134,7 +134,7 @@ Example of workflow
 * It doesn't do anything special or have fancy powers. It's just like any other branch
 * Many people designate the master branch as their "source of truth" or the "official branch" for their codebase, but not necessary to treat it in this way
 
-### *In 2020, Github renamed the default branch from master to main. The default Git branch name is still master
+### *In 2020, Github renamed the default branch from master to main. The default Git branch name is still master (not sure about this)*
 
 ### Head
 
@@ -305,8 +305,50 @@ This is a branch just like any other, but it's simple the first one created.
     #You also will get a warning if the branch is not merged
         -> You can confirm you want to do this anyways with -D
     
+## Merging - key points
 
-# Merging Branches and conflicts
+* *We merge branches and not specific commits*
+* *We always merge to the current HEAD branch*
+
+### *Follow these steps for merging*
+
+* Switch to or checkout the branch you want to merge the changes into (the recieving branch)
+* Use the git merge command to merge changes from a specific branch into the current branch
+
+###
+
+    git switch master 
+    git merge bugfix
+
+
+### Kinds of merge
+
+* Fast forward - master branch se koi branch banayi ho, uspe commits kiya ho, par master pe kisi aur ne koi commit na kiya ho toh, fast forward merge hojata hai. Bas master pointer ko apne branch ke pointer pe laana hota hai
+* Merge commit - master branch se koi branch banayi ho, new branch pe commits kiya ho, par master pe aur kisi ke bhi commits aagaye ho to, merge commit krna padta hai jahan pe master aur abhi wali branch ke pointers merge commit wale pe aajate hain
+
+### How do conflicts look
+
+*Below is a example of conflict marker*
+
+    <<<<<<<< HEAD
+    I have 2 cats 
+    I also have chickens
+    ========
+    I used to have a dog :(
+    >>>>>>>> bug-fix
+
+* *Content from your current HEAD (jis branch mein hum merge kr rahe hote hain (generally master or main)) is displayed between <<<<<< HEAD and ==========*
+* *The content from the branch you are trying to merge from is displayed between the ======= and  >>>>>>> symbols.*
+
+### Resolving conflicts
+
+* Open up the file(s) with merge conflicts
+* Edit the file(s) to remove the conflicts. We can decide which branch's content you want to keep for each or we can keep content from the both
+* Remove the conflict markers in the document
+* Add your changes and then
+
+*Whenever you encounter merge conflicts, follow these steps to resolve them:*
+### Merges more in detail
 
 
 # Simple merge (Fast forward)
@@ -328,9 +370,7 @@ This is a branch just like any other, but it's simple the first one created.
                 |
                 new_branch
 
-# More practical case
-
-    * 
+### More practical case
 
             master <- head
             |
@@ -341,12 +381,13 @@ This is a branch just like any other, but it's simple the first one created.
                     |
                     new_branch
 
-Now, we need to merge new_branch with the master branch. For this we need to do the same thing again , but this is not fast forward merge
-    Here, there can be two scenarios
+*Now, we need to merge new_branch with the master branch. For this we need to do the same thing again , but this is not fast forward merge*
+    
+### *Here, there can be two scenarios*
 
-* Auto commit - Best case
+*Auto commit - Best case*
  
-    *
+    
 
 
                                 master <- head
@@ -358,14 +399,14 @@ Now, we need to merge new_branch with the master branch. For this we need to do 
                         |
                         new_branch
 
-    Yeh tab hai jab conflicts naa ho dono branches mein 
+*Yeh tab hai jab conflicts naa ho dono branches mein*
 
 * Merge Conflicts - Resolving conflicts and merging branches
 
     Git will warn us about files in conflict
     Our code editor will give a markdown and syntax highlighting for resolving the conflicts
 
-## git diff
+### git diff
 
 * git diff is a powerful tool that can show the differences between data sets
 * Display the differences betweent the original file and unstaged changes
