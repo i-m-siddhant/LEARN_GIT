@@ -175,26 +175,25 @@
 * git pull
 * git fetch
 
-#### WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
+#### 
 
-#### git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
+    WD -> git add -> Staging area -> git commit -> Local repository -> (git push) -> Remote repository
 
-** 
+#### 
 
-    Git fetch will download changes from the Github remote repository, however you will not see those changes be part of the files you have in the working directory
+    git fetch -> will update your local repository logs, but remote se code aake aapke local mein files ko overwrite nhi krega!!!
+
+* *Git fetch will download changes from the Github remote repository, however you will not see those changes be part of the files you have in the working directory*
     
-    Fetch allows us to grab additional work done on the remote master branch without needing to merge it in your working directory files
+* *Fetch allows us to grab additional work done on the remote master branch without needing to merge it in your working directory files*
 
-    Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.
+* *Git fetch makes sense when you're working with others and want to see whtat changes they've made but aren't ready to overwrite your own files yet.*
 
 #### *Commands*
-    ** 
 
     git fetch <remote> <branch>
 
 #### *Usually, it is like this* 
-
-    ** 
 
     git fetch origin <branch>
 
@@ -223,8 +222,6 @@ This is a branch just like any other, but it's simple the first one created.
 
 
 ### ---Creating a new branch----
-
-    *
     
     c1 -> c2 -> c3 <- main
     at c3 we make a new branch
