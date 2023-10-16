@@ -381,3 +381,4 @@ This is a branch just like any other, but it's simple the first one created.
 
 * git diff is a powerful tool that can show the differences between data sets
 * Display the differences betweent the original file and unstaged changes
+* compares staging area and working directory
