@@ -379,6 +379,67 @@ This is a branch just like any other, but it's simple the first one created.
 
 ### git diff
 
+    git diff
+
 * git diff is a powerful tool that can show the differences between data sets
 * Display the differences betweent the original file and unstaged changes
 * compares staging area and working directory
+
+####
+
+    git diff HEAD
+
+* git diff HEAD list all changes in the working directory since the last commit
+
+### Understand git diff output 
+
+
+    diff --git a/rainbow.txt b/rainbow.txt
+    index 72d1d5a..f2c8117 100644
+    --- a/rainbow.txt
+    +++ b/rainbow.txt
+    @@ -3,4 +3,5 @@ orange
+    yellow
+    green
+    blue 
+    -purple
+    +indigo
+    +violet
+
+* Above is a sample output of git diff command 
+* First line explains which files it is comparing. Usually these are the two versions of the same file
+* Git declares one version as A and other as B
+* Next line the is the file metadata containing the hashes of two file being compared.Last number is the internal file mode identifier and first two are the hashes.
+* Markers - These are important. Basically, how the two files are going to be represented. File A gets the minus sign (-). While the file B gets the plus sign (+).
+* Chunks - A diff won't show the entire contents of a file, but instead only shows portions or chunks that were modified.
+* *Chunks also include some unchanged lines before and after a change to provide some context*
+* *Each chunk starts with a chunk header found between @@ and @@*
+* *@@ -3,4 +3,5 @@ orange, this chunk header means, 4 lines are extracted from file A starting from line 3. Also 5 lines are extracted dfrom file B starting from line 3*
+
+#### What is going to get committed?
+
+    git diff --staged
+    git diff --cached
+
+* These two commands works the same. Both will list the changes between the staging area and our last commit. This means that below quote :
+
+    *Show me what will be included in my commit if I run git commit right now*
+
+#### Viewing changes with a file
+
+    git diff HEAD [filename]
+    git diff --staged [filename]
+
+* We can view the changes within a specific file by providing git diff with a filename.
+
+#### Comparing branches
+
+    git diff branch1..branch2
+
+* git diff branch1..branch2 will list the changes between the tips of branch1 and branch2
+
+#### Comparing commits
+
+    git diff commit1..commit2
+
+* To compare two commits, provide git diff with the commit hashes of the commits in question.
