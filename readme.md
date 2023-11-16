@@ -488,3 +488,41 @@ This is a branch just like any other, but it's simple the first one created.
     git stash clear
 
 * To clear out all stashes, run git stash clear
+
+
+### Undoing changes and time travelling, detached head and more with Checkout - the god command
+
+#### Checking out commit and case of detached head
+
+    git checkout <commit-hash>
+
+* Detached HEAD - You are in 'detached HEAD' state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by switching back to a branch.
+
+#### What the hell we will do with detached head
+
+You have a couple options:
+
+* *Go into nostalgia* - Stay in detached HEAD to examine the contents of the old commit.  Poke around, view the files, etc. 
+* *Live in the present* - Leave and go back to wherever you were before - reattach the HEAD
+* *Build from the past* - Create a new branch and switch to it.  You can now make and save changes, since HEAD is no longer detached.
+
+##### Disclaimer - You might not use it, but for showing it off with friends
+
+    HEAD~1 refers to the commit before HEAD (parent)
+    HEAD~2 refers to 2 commits before HEAD (grandparent)
+
+* git checkout supports a slightly odd syntax for referencing previous commits relative to a particular commit. 
+
+#### Discarding Changes
+
+    git checkout HEAD <file>
+
+*to discard any changes in that file, reverting back to the HEAD.*
+*Instead, we can go for a simpler command as well*
+
+    git checkout -- <file>
+
+
+
+
+
